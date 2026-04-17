@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Add Student</h2>
+
+<form method="POST" onsubmit="return validateForm()">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control mb-2" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control mb-2" id="email" name="email" required>
+    </div>
+    <div class="mb-3">
+        <label for="course" class="form-label">Course</label>
+        <input type="text" class="form-control mb-2" id="course" name="course" required>
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
+
+{% endblock %}
