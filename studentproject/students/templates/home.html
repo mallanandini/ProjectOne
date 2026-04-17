@@ -16,9 +16,9 @@
             <p>{{ student.email }}</p>
             <p>{{student.course }}</p>
 
-            <a href="{% url 'update_student' student.id %}" class="btn btn-warning">Edit</a>
+            <a href="{% url 'update_student' student.id %}" class="btn btn-warning">Update</a>
             <a href="{% url 'delete_student' student.id %}" class="btn btn-danger" onclick="return confirmDelete()">Delete</a>
-
+            
         </div>
     </div>
     {% endfor %}
